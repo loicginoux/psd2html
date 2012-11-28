@@ -61,6 +61,7 @@ ul{
 
 
 
+
 /* ==========================================================================
 	Header
    ========================================================================== */
@@ -73,7 +74,7 @@ header .navbar-inner {
 }
 
 header .container{
-	width:940px;
+	width: 960px;
 }
 
 header.navbar .brand{
@@ -124,6 +125,7 @@ header.navbar .nav > li > a{
 	padding: 10px 5px;
 	color: whitesmoke;
 	letter-spacing: 1px;
+	font-size: 14px;
 }
 
 header .join-toptal{
@@ -149,6 +151,261 @@ header .join-toptal button.login{
    content
    ========================================================================== */
 
+.profile [class*="span"] {
+border: 1px solid #E5E5E5;
+height: 240px;
+margin: -1px;
+}
+
+.profile .profile-image, .bottom-profile .span12{
+    border-right: 0;
+}
+.profile .profile-intro,
+.profile .introduction .span3{
+    border-left:0
+}
+
+.introduction .span3:first-child{
+    border-left: 1px solid #e5e5e5;
+
+}
+
+.profile .portfolio, .profile .most-amazing{
+    border-top: 0;
+}
+.profile .experience,
+.profile .code,
+.profile .conditions,
+.profile .environment,
+.profile .best-client,
+.profile .location-map,
+.profile .note{
+	border-top: 0;
+	border-left: 0;
+}
+
+.profile .action, .profile .span6{
+    border:0
+}
+
+.profile .availibility{
+    border-bottom: 1px solid #CCC;
+
+
+}
+/*----  profile intro   ------*/
+.profile-image{
+    background-color: #b8b8b8;
+
+}
+
+.profile-intro{
+    background-color: #e6e6e6;
+}
+
+.profile-intro .details{
+    margin: 15px 25px 0 30px;
+}
+
+.details .name{
+    font-size: 45px;
+    font-weight: 100;
+    height: 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.details .name a, .details .name input {
+    padding: 19px 10px 0 10px;
+    width: 400px;
+    height: 21px;
+    display: inline-block;
+    line-height: 0;
+
+}
+
+.details .name input{
+    padding: 0px 10px 0  10px;
+    line-height: 42px;
+    height: 38px;
+    font-size: 38px; font-weight: 100;
+}
+
+.details a:hover{
+    text-decoration:none;
+    border: 1px solid #ccc
+}
+
+.name .icon-ok{
+    float:right;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+
+.details .location, .details .languages, .details .skills{
+    margin-bottom: 0px;
+    position: relative;
+
+    height: 20px;
+}
+
+.details .location a,
+.details .location input,
+.details .languages a,
+.details .languages input,
+.details .skills a,
+.details .skills input {
+    padding: 0 10px;
+    width: 400px;
+    display: inline-block;
+
+}
+
+.details .location input,
+.details .languages input,
+.details .skills input{
+    line-height: 12px;
+    height: 18px; 
+}
+
+.location .validationMessage{
+    position:absolute;
+    
+    
+
+    top: 2px;
+    right: 15px;
+}
+
+.location .icon-ok, .languages .icon-ok{
+    position: absolute;
+    right: 15px;
+    top: 2px;
+}
+
+.details .skills{
+    margin-top: 10px
+}
+.profile-intro .action .btn{
+    -webkit-border-radius: 20px;
+
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin: 20px 0 10px;
+}
+
+.profile-intro .download{
+    margin: 85px 0 0 20px;
+    background: url(../img/download_resume.png) no-repeat;
+    height: 50px;
+}
+
+.profile-intro .download .btn{
+    margin: 15px 0 0 15px;
+}
+
+.profile-intro .download .btn i{
+    margin-top: 0;
+}
+/*----  profile in depth   ------*/
+.profile-in-depth h4{
+    text-align: center;
+}
+
+.profile-in-depth{
+    text-align: center;
+}
+
+.profile-in-depth .add{
+    padding-top: 33%;
+}
+
+.code .add{
+   padding-top: 23%;
+}
+
+.environment .add{
+   padding-top: 15%;
+}
+
+.availibility h2{
+    font-size:28px
+}
+
+.quote{
+	background: url(../img/quote.png) no-repeat;
+}
+/*---- let me introduce ------*/
+
+.introduction .add{
+   padding-top: 45%;
+}
+
+.let-me-introduce .span12{
+    border:0;
+    height: 35px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.let-me-introduce h2{
+	font-weight: 100;
+	margin: 0;
+}
+
+/*----  bottom profile   ------*/
+.bottom-profile{
+    background-color: #e5e5e5;
+    border:0;
+
+}
+
+.bottom-profile .span12{
+    height: 85px;
+    padding-top: 30px;}
+
+.bottom-profile h3{
+    display:inline;
+    font-weight: normal;
+}
+
+.bottom-profile p{}
+
+.bottom-profile button.btn{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+/*----  toptal skills    ------*/
+.toptal-skills h4{
+    padding: 50px 0 25px;
+}
+
+.toptal-skills ul{
+    margin:0;
+}
+.toptal-skills li a{
+ margin-left: 17px;
+}
+
+.toptal-skills li a:hover{
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    cursor: default;
+}
+
+.toptal-skills li.first a{
+ margin-left: 0;
+}
+
+.toptal-skills li span.index{
+    font-weight: bold;
+
+    display: inline-block;
+    width: 13px;
+}
 
 /* ==========================================================================
 	footer
@@ -157,6 +414,7 @@ header .join-toptal button.login{
 footer .pre-footer{
 	background-color: black;
 	height: 100px;
+	margin-top: 55px;
 }
 
 footer .pre-footer .content{
@@ -175,13 +433,6 @@ footer .pre-footer h3 .highlight{
     color: whitesmoke;
 }
 
-footer .pre-footer .btn{
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    padding: 9px 25px;
-    margin: 0 5px 2px;
-}
 
 footer .footer{
 	background-color: #cccccc;
@@ -226,9 +477,6 @@ footer .span1 ul li a{
 	padding: 3px 0;
 }
 
-footer .span2{
-	padding-left: 20px;
-}
 
 footer .terms{
 	font-size: 9px;
@@ -256,6 +504,13 @@ footer .terms .pull-right a{
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
+.btn.rounded{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	padding: 10px 25px; margin: 0 5px 2px;
+}
 .ir {
     background-color: transparent;
     border: 0;

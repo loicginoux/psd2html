@@ -10,7 +10,7 @@
 	<meta name="description" content="toptal test">
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 
@@ -91,45 +91,52 @@
             			<div class="span9 profile-intro">
             				<div class="row">
             					<div class="span3 pull-right action">
-            						<button class="btn btn-primary" type="button">Save profile</button>
-            						<button class="btn" type="button">Publish profile</button>
-            						<p class="small">you can only publish a completed profile</p>
+            						<button class="btn btn-inverse" type="button">Save profile</button>
+            						<button class="btn btn-primary" type="button">Publish profile</button>
+            						<p class="muted">
+            							<small>(you can only publish a completed profile)</small>
+            						</p>
             						<div class="download">
-            							<img src="img/download_resume.png" alt="download">
-            							<button class="btn btn-primary" type="button"><i class="icon-upload"></i> Upload resumé</button>
+            							<button class="btn btn-inverse" type="button"><i class="icon-upload icon-white"></i> Upload resumé</button>
             						</div>
             					</div>
             					<div class="span6">
-            						<div class="name">
-            							<a href="#">Add name</a>
-            							<input type="text" class="hide">
-            						</div>
-            						<div class="location">
-            							<a href="#">Add location</a>
-            							<input type="text" class="hide">
-            						</div>
-            						<div class="languages">
-            							<a href="#">Add languages</a>
-            							<input type="text" class="hide">
-            						</div>
-            						<div class="skills">
-            							<ul class="mySkills hide">
-            								<li class="expert skill">Ruby <i class="icon-remove-sign"></i></li>
-            								<li class="expert skill">PHP</li>
-            								<li class="strong skill">javascript</li>
-            								<li class="medium skill">actionscript</li>
-            							</ul>
-            							<a href="#" class="skill">Add skill <i class="icon-plus hide"></i></a>
-            							<div class="skill-nput hide">
-            								<input type="text">
-            								<div class="btn-group">
-            									<button class="btn btn-mini">Strong</button>
-            									<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-            									<ul class="dropdown-menu">
-            										<li><a href="#">Expert</a></li>
-            										<li><a href="#">Strong</a></li>
-            										<li><a href="#">Medium</a></li>
-            									</ul>
+            						<div class="details">
+            							<div class="name">
+            								<i class="icon-ok hide"></i>
+            								<a href="#">Add name</a>
+            								<input type="text" class="hide">
+            							</div>
+            							<div class="location">
+            								<i class="icon-ok hide"></i>
+            								<span class="validationMessage muted hide">Validating city...</span>
+            								<a href="#">Add location</a>
+            								<input type="text" class="hide">
+            							</div>
+            							<div class="languages">
+            								<i class="icon-ok hide"></i>
+            								<a href="#">Add languages</a>
+            								<input type="text" class="hide">
+            							</div>
+            							<div class="skills">
+            								<ul class="mySkills hide">
+            									<li class="expert skill">Ruby <i class="icon-remove-sign"></i></li>
+            									<li class="expert skill">PHP</li>
+            									<li class="strong skill">javascript</li>
+            									<li class="medium skill">actionscript</li>
+            								</ul>
+            								<a href="#">Add skill <i class="icon-plus hide"></i></a>
+            								<div class="skill-nput hide">
+            									<input type="text">
+            									<div class="btn-group">
+            										<button class="btn btn-mini">Strong</button>
+            										<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+            										<ul class="dropdown-menu">
+            											<li><a href="#">Expert</a></li>
+            											<li><a href="#">Strong</a></li>
+            											<li><a href="#">Medium</a></li>
+            										</ul>
+            									</div>
             								</div>
             							</div>
             						</div>
@@ -140,71 +147,94 @@
             		<div class="profile-in-depth">
             			<div class="row">
             				<div class="span3 portfolio">
-            					<h3>Portfolio</h3>
-            					<a href="#">Add content...</a>
+            					<h4>Portfolio</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3 experience">
-            					<h3>Experience</h3>
-            					<a href="#">Add content...</a>
+            					<h4>Experience</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3 code">
-            					<h3>Sample code and algorithms</h3>
-            					<a href="#">Add content...</a>
+            					<h4>Sample code and algorithms</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3 conditions">
-            					<div class="availibility">
-            						<h3>Availibility</h3>
-            						<h1>Full-time</h1>
+            					<div class="availibility row">
+            						<h4>Availibility</h4>
+            						<h2>Full-time</h2>
             					</div>
             					<div class="environment">
-            						<h3>Prefered environment</h3>
-	            					<a href="#">Add content...</a>
+            						<h4>Prefered environment</h4>
+	            					<div class="add">
+            							<a href="#">Add content...</a>
+            						</div>
             					</div>
             				</div>
             			</div>
             			<div class="row">
-            				<div class="span3 most-amazing">
-            					<h3>The most amazing...</h3>
-            					<a href="#">Add content...</a>
+            				<div class="span3 most-amazing quote">
+            					<h4>The most amazing...</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
-            				<div class="span3 best-client">
-            					<h3>In clients I look for...</h3>
-            					<a href="#">Add content</a>
+            				<div class="span3 best-client quote">
+            					<h4>In clients I look for...</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3 location-map">
-            					<h3>Location</h3>
-            					<a href="#">Add content</a>
+            					<h4>Location</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
-            				<div class="span3 note">
-            					<h3>Note</h3>
-            					<a href="#">Add content</a>
+            				<div class="span3 note quote">
+            					<h4>Note</h4>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             			</div>
             			<div class="row let-me-introduce">
             				<div class="span12 pagination-centered">
-            					<h1>Let me introduced myself...</h1>
+            					<h2>Let me introduced myself...</h2>
             				</div>
             			</div>
             			<div class="row introduction">
             				<div class="span3">
-            					<a href="#">Add content</a>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3">
-            					<a href="#">Add content</a>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3">
-            					<a href="#">Add content</a>
-
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
             				</div>
             				<div class="span3">
-            					<a href="#">Add content</a>
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
 
             				</div>
             			</div>
-            			<div class="row">
+            			<div class="row bottom-profile">
             				<div class="span12 pagination-centered">
             					<h3>Important! Please also fill out the Q&A form</h3>
-            					<button class="btn" type="button">Q&A form</button>
+            					<button class="btn rounded" type="button">Q&A form</button>
             					<p>5 of 25 questions answered</p>
             				</div>
             			</div>
@@ -214,86 +244,232 @@
 
 
             	<div class="toptal-skills">
-            		<h3 class="pagination-centered">Top Skills on toptal</h3>
+            		<h4 class="pagination-centered">Top Skills on toptal</h4>
             		<div class="row">
             			<div class="span3">
             				<ul>
-            					<li class="first"><span class='index'>.</span>.NET programmers</li>
-            					<li>3ds Max Engineers</li>
-            					<li class="first"><span class='index'>A</span>Administrative Assistants</li>
-            					<li>Advertising Consultants</li>
-            					<li>Ajax programmers</li>
-            					<li>Amazon Web Services...</li>
-            					<li>Android Programmers</li>
-            					<li>Animators</li>
-            					<li>Article Writers</li>
-            					<li>ASP Programmers</li>
-            					<li>ASP.NET Programmers</li>
-            					<li class="first"><span>B</span>Blog Writers</li>
-            					<li>Business Writers</li>
-            					<li class="first"><span>C</span>C Programmers</li>
-            					<li>Cocoa Programmers</li>
-            					<li>Content Writers</li>
+            					<li class="first">
+            						<span class='index'>.</span>
+            						<a href="#">.NET programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">3ds Max Engineers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>A</span>
+            						<a href="#">Administrative Assistants</a>
+            					</li>
+            					<li>
+            						<a href="#">Advertising Consultants</a>
+            					</li>
+            					<li>
+            						<a href="#">Ajax programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Amazon Web Services...</a>
+            					</li>
+            					<li>
+            						<a href="#">Android Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Animators</a>
+            					</li>
+            					<li>
+            						<a href="#">Article Writers</a>
+            					</li>
+            					<li>
+            						<a href="#">ASP Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">ASP.NET Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>B</span>
+            						<a href="#">Blog Writers</a>
+            					</li>
+            					<li>
+            						<a href="#">Business Writers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>C</span>
+            						<a href="#">C Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Cocoa Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Content Writers</a>
+            					</li>
             				</ul>
             			</div>
             			<div class="span3">
             				<ul>
-            					<li>Copyright Attorneys</li>
-            					<li>Creative Writer</li>
-            					<li>CSS programmers</li>
-            					<li>Custom Services Reps</li>
-            					<li class="first"><span>D</span>Data Entry Experts</li>
-            					<li>DHTML Programmers</li>
-            					<li>Dot Net Nule Programmers</li>
-            					<li>Drupal Programmers</li>
-            					<li class="first"><span>F</span>Flash Designers</li>
-            					<li>Foursquare Programmers</li>
-            					<li>French Translators</li>
-            					<li class="first"><span>G</span>Google App Engineer</li>
-            					<li>Graphic Designers</li>
-            					<li class="first"><span>H</span>HTML Programmers</li>
-            					<li>HTML 5 Programmers</li>
-            					<li class="first"><span>I</span>Illustrator Designers</li>
+            					<li>
+            						<a href="#">Copyright Attorneys</a>
+            					</li>
+            					<li>
+            						<a href="#">Creative Writer</a>
+            					</li>
+            					<li>
+            						<a href="#">CSS programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Custom Services Reps</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>D</span>
+            						<a href="#">Data Entry Experts</a>
+            					</li>
+            					<li>
+            						<a href="#">DHTML Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Dot Net Nule Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Drupal Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>F</span>
+            						<a href="#">Flash Designers</a>
+            					</li>
+            					<li>
+            						<a href="#">Foursquare Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">French Translators</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>G</span>
+            						<a href="#">Google App Engineer</a>
+            					</li>
+            					<li>
+            						<a href="#">Graphic Designers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>H</span>
+            						<a href="#">HTML Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">HTML 5 Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>I</span>
+            						<a href="#">Illustrator Designers</a>
+            					</li>
             				</ul>
             			</div>
             			<div class="span3">
             				<ul>
-            					<li>InDesign Designers</li>
-            					<li>Iphone Programmers</li>
-            					<li class="first"><span class='index'>J</span>Java Programmers</li>
-            					<li>Javascript Programmers</li>
-            					<li>Joomla programmers</li>
-            					<li class="first"><span>L</span> LAMP Programmers</li>
-            					<li>Linux Programmers</li>
-            					<li>Logo Designers</li>
-            					<li class="first"><span>M</span>Mac OS Programmers</li>
-            					<li>Magento Programmers</li>
-            					<li>Microsoft Excel Experts</li>
-            					<li>Microsoft Sharepoint...</li>
-            					<li>Mobile Programmers</li>
-            					<li>MYSQL Programmers</li>
-            					<li class="first"><span>N</span>Newsletter Writers</li>
-            					<li class="first"><span>O</span>Office Administrators...</li>
+            					<li>
+            						<a href="#">InDesign Designers</a>
+            					</li>
+            					<li>
+            						<a href="#">Iphone Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>J</span>
+            						<a href="#">Java Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Javascript Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Joomla programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>L</span>
+            						<a href="#">LAMP Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Linux Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Logo Designers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>M</span>
+            						<a href="#">Mac OS Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Magento Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Microsoft Excel Experts</a>
+            					</li>
+            					<li>
+            						<a href="#">Microsoft Sharepoint...</a>
+            					</li>
+            					<li>
+            						<a href="#">Mobile Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">MYSQL Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>N</span>
+            						<a href="#">Newsletter Writers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>O</span>
+            						<a href="#">Office Administrators...</a>
+            					</li>
             				</ul>
             			</div>
             			<div class="span3">
             				<ul>
-            					<li>Online Writers</li>
-            					<li>Oracle Programmers</li>
-            					<li>osCommerce Programmers</li>
-            					<li class="first"><span class='index'>P</span>Palm Programmers</li>
-            					<li>Paypal Programmers</li>
-            					<li>Photoshop Designers</li>
-            					<li>PHP Programmers</li>
-            					<li class="first"><span class='index'>R</span>Ruby On Rails Programmers</li>
-            					<li class="first"><span class='index'>S</span>Salesforce.com Programmers</li>
-            					<li>SAP Programmers</li>
-            					<li>SEM Programmers</li>
-            					<li>SEO Programmers</li>
-            					<li>Software Testing Programmers</li>
-            					<li>Spanish Translators</li>
-            					<li>SQL Programmers</li>
-            					<li class="first"><span class='index'>T</span>Transcriptionnists</li>
+            					<li>
+            						<a href="#">Online Writers</a>
+            					</li>
+            					<li>
+            						<a href="#">Oracle Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">osCommerce Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>P</span>
+            						<a href="#">Palm Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Paypal Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Photoshop Designers</a>
+            					</li>
+            					<li>
+            						<a href="#">PHP Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>R</span>
+            						<a href="#">Ruby On Rails Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>S</span>
+            						<a href="#">Salesforce.com Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">SAP Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">SEM Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">SEO Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Software Testing Programmers</a>
+            					</li>
+            					<li>
+            						<a href="#">Spanish Translators</a>
+            					</li>
+            					<li>
+            						<a href="#">SQL Programmers</a>
+            					</li>
+            					<li class="first">
+            						<span class='index'>T</span>
+            						<a href="#">Transcriptionnists</a>
+            					</li>
             				</ul>
             			</div>
             		</div>
@@ -306,9 +482,9 @@
             			<h3>Join the toptal community.
             				<span class="highlight">Apply to work with us as a</span>
             			</h3>
-            			<button class="btn" type="button">developer</button>
+            			<button class="btn rounded" type="button">developer</button>
             			<h3 class="italic">or</h3>
-            			<button class="btn" type="button">client</button>
+            			<button class="btn rounded" type="button">client</button>
             		</div>
             	</div>
             	<div class="footer">
@@ -381,6 +557,7 @@
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
 
             <script src="js/vendor/bootstrap.min.js"></script>
+            <script src="js/vendor/spine.js"></script>
             <script src="js/plugins.js"></script>
             <script src="js/main.js"></script>
 
