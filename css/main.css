@@ -55,28 +55,190 @@ textarea {
     padding: 0.2em 0;
 }
 
+ul{
+	list-style-type: none;
+}
+
+
 
 /* ==========================================================================
-   Author's custom styles
+	Header
    ========================================================================== */
+header{
+	background-color: black;
+}
 
-
-.navbar .navbar-inner {
+header .navbar-inner {
 	border-radius: 0;
 }
 
-.navbar .container{
+header .container{
 	width:940px;
 }
 
+header.navbar .brand{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+header .brand a{
+	overflow: hidden;
+	background: url(../img/logo.png) no-repeat;
+	color: white;
+	font-size: 38px;
+	font-family: "Myriad Pro";
+	line-height: 38px;
+	text-indent: -9999px;
+	width: 120px;
+	height: 50px;
+	display: block;
+}
+
+header .slogan{
+	font-style: italic;
+	font-family: "Myriad Pro";
+	font-size: 17px;
+	margin-top: 16px;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+header .phone{
+	font-size: 16px;
+	color: whitesmoke;
+	text-align: right;
+	padding-top: 10px;
+}
+
+header .menu{
+	padding-bottom: 8px;
+	color: white;
+	font-weight: lighter;
+}
+
+header.navbar .nav{
+    margin-left: 5px;
+
+}
+
+header.navbar .nav > li > a{
+	padding: 10px 5px;
+	color: whitesmoke;
+	letter-spacing: 1px;
+}
+
+header .join-toptal{
+	text-align: right;
+	padding-top: 23px;
+}
+
+header .join-toptal span{
+	padding-right: 5px;
+	font-size: 12px;
+}
+
+header.navbar .join-toptal button{
+    margin-top: 0;
+
+}
+
+header .join-toptal button.login{
+    margin-left: 15px;
+
+}
+/* ==========================================================================
+   content
+   ========================================================================== */
 
 
+/* ==========================================================================
+	footer
+   ========================================================================== */
+
+footer .pre-footer{
+	background-color: black;
+	height: 100px;
+}
+
+footer .pre-footer .content{
+	text-align: center;
+	padding-top: 30px;
+}
 
 
+footer .pre-footer h3{
+    display: inline;
+    color: grey;
+    font-weight: 200;
+}
 
+footer .pre-footer h3 .highlight{
+    color: whitesmoke;
+}
 
+footer .pre-footer .btn{
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding: 9px 25px;
+    margin: 0 5px 2px;
+}
 
+footer .footer{
+	background-color: #cccccc;
+	height: 240px;
+}
 
+footer .footer .container{
+	padding-top: 20px
+}
+
+footer .span6 p{
+	margin-right: 50px;
+}
+footer ul{
+	margin: 0 0 10px 0;
+	color: black;
+}
+
+footer ul li{
+    padding-bottom: 5px;
+
+}
+
+footer ul li a{
+	width: 100%;
+	display: inline-block;
+
+}
+
+footer .span1{
+	font-size: 15px;
+	padding-top: 7px;
+}
+
+footer .span1 ul li{
+    padding-bottom: 0;
+
+}
+
+footer .span1 ul li a{
+	font-weight: bold;
+	padding: 3px 0;
+}
+
+footer .span2{
+	padding-left: 20px;
+}
+
+footer .terms{
+	font-size: 9px;
+	margin-top: 10px;
+}
+
+footer .terms .pull-right a{
+    margin: 0 3px;
+
+}
 
 /* ==========================================================================
    Media Queries
@@ -94,7 +256,6 @@ textarea {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 .ir {
     background-color: transparent;
     border: 0;
@@ -151,6 +312,10 @@ textarea {
 
 .clearfix {
     *zoom: 1;
+}
+
+.italic{
+	font-style: italic;
 }
 
 /* ==========================================================================
