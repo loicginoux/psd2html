@@ -21,4 +21,10 @@
     }
 }());
 
+
+//specify one global variable
+if (typeof Toptal === "undefined") {
+    Toptal = {};
+}
+
 // Place any jQuery/helper plugins in here.

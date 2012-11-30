@@ -1184,7 +1184,7 @@ input[type="file"] {
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
 
-  line-height: 30px;
+  line-height: 16px;
 }
 
 select {
@@ -3144,7 +3144,7 @@ button.close {
   margin-bottom: 0;
   *margin-left: .3em;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 19px;
   *line-height: 20px;
   color: #333333;
   text-align: center;

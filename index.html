@@ -86,6 +86,7 @@
             				<a href="#">
             					Add profile image...
             				</a>
+            				<button class="btn btn-small hide" type="button">Browse</button>
             				<input type="file" class="hide">
             			</div>
             			<div class="span9 profile-intro">
@@ -104,7 +105,8 @@
             						<div class="details">
             							<div class="name">
             								<i class="icon-ok hide"></i>
-            								<a href="#">Add name</a>
+            								<a href="#
+            								">Add name</a>
             								<input type="text" class="hide">
             							</div>
             							<div class="location">
@@ -119,17 +121,11 @@
             								<input type="text" class="hide">
             							</div>
             							<div class="skills">
-            								<ul class="mySkills hide">
-            									<li class="expert skill">Ruby <i class="icon-remove-sign"></i></li>
-            									<li class="expert skill">PHP</li>
-            									<li class="strong skill">javascript</li>
-            									<li class="medium skill">actionscript</li>
-            								</ul>
-            								<a href="#">Add skill <i class="icon-plus hide"></i></a>
-            								<div class="skill-nput hide">
-            									<input type="text">
+            								<ul class="mySkills"></ul>
+            								<a href="#" class="add">Add skill <i class="icon-plus"></i></a>
+            								<div class="skill-input hide">
             									<div class="btn-group">
-            										<button class="btn btn-mini">Strong</button>
+            										<button class="btn btn-mini level">Strong</button>
             										<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
             										<ul class="dropdown-menu">
             											<li><a href="#">Expert</a></li>
@@ -137,6 +133,7 @@
             											<li><a href="#">Medium</a></li>
             										</ul>
             									</div>
+            									<input type="text">
             								</div>
             							</div>
             						</div>
@@ -148,6 +145,32 @@
             			<div class="row">
             				<div class="span3 portfolio">
             					<h4>Portfolio</h4>
+            					<ul class="hide">
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
+            					</ul>
             					<div class="add">
             						<a href="#">Add content...</a>
             					</div>
@@ -191,6 +214,7 @@
             					</div>
             				</div>
             				<div class="span3 location-map">
+            					<img src="img/portland_map.png" alt="Portland, Oregon" class="hide">
             					<h4>Location</h4>
             					<div class="add">
             						<a href="#">Add content...</a>
@@ -559,6 +583,11 @@
             <script src="js/vendor/bootstrap.min.js"></script>
             <script src="js/vendor/spine.js"></script>
             <script src="js/plugins.js"></script>
+            <script src="js/controllers/DetailsController.js"></script>
+            <script src="js/controllers/LocationController.js"></script>
+            <script src="js/controllers/ProfilePictureController.js"></script>
+            <script src="js/controllers/SkillsController.js"></script>
+            <script src="js/controllers/PortfolioController.js"></script>
             <script src="js/main.js"></script>
 
         </body>
