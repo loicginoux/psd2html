@@ -243,9 +243,9 @@ margin: -1px;
 }
 
 .details .name a, .details .name input {
-    padding: 19px 10px 0 10px;
+    padding: 0px 10px;
     width: 400px;
-    height: 21px;
+    height: auto;
     display: inline-block;
     line-height: 40px;
 
