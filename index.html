@@ -145,7 +145,16 @@
             			<div class="row">
             				<div class="span3 portfolio">
             					<h4>Portfolio</h4>
-            					<ul class="hide">
+            					<div class="add">
+            						<a href="#">Add content...</a>
+            					</div>
+            					<p class="languages hide"></p>
+            					<ul class="show"></ul>
+            					<ul class="hide inputs">
+            						<li>
+            							<input type="text" class="project" placeholder="Project name">
+            							<input type="text" class="skillUsed" placeholder="Skills used">
+            						</li>
             						<li>
             							<input type="text" class="project" placeholder="Project name">
             							<input type="text" class="skillUsed" placeholder="Skills used">
@@ -171,15 +180,49 @@
             							<input type="text" class="skillUsed" placeholder="Skills used">
             						</li>
             					</ul>
-            					<div class="add">
-            						<a href="#">Add content...</a>
-            					</div>
+
+            					<a class="btn btn-small btn-success hide" href="#"><i class="icon-ok icon-white"></i></a>
+
             				</div>
             				<div class="span3 experience">
             					<h4>Experience</h4>
             					<div class="add">
             						<a href="#">Add content...</a>
             					</div>
+            					<ul class="show"></ul>
+            					<ul class="hide inputs">
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            						<li>
+            							<input type="text" class="language" placeholder="Language">
+            							<input type="text" class="years" placeholder="years">
+            						</li>
+            					</ul>
+
+            					<a class="btn btn-small btn-success hide" href="#"><i class="icon-ok icon-white"></i></a>
+
             				</div>
             				<div class="span3 code">
             					<h4>Sample code and algorithms</h4>
@@ -197,6 +240,9 @@
 	            					<div class="add">
             							<a href="#">Add content...</a>
             						</div>
+            						<p class="hide"></p>
+            						<input type="text" class="hide" placeholder="Add you preferred environment">
+            						<a class="btn btn-small hide" href="#"><i class="icon-ok"></i></a>
             					</div>
             				</div>
             			</div>
@@ -206,12 +252,20 @@
             					<div class="add">
             						<a href="#">Add content...</a>
             					</div>
+            					<p class="quoted hide"></p>
+            					<textarea class="hide" cols="20" rows="7" placeholder="tell us about the best software you have worked on"></textarea>
+            					<p class="source hide"></p>
+            					<a class="btn btn-small hide" href="#"><i class="icon-ok"></i></a>
             				</div>
             				<div class="span3 best-client quote">
             					<h4>In clients I look for...</h4>
             					<div class="add">
             						<a href="#">Add content...</a>
             					</div>
+            					<p class="quoted hide"></p>
+            					<textarea class="hide" cols="20" rows="7" placeholder="tell us about what your best client is"></textarea>
+            					<p class="source hide"></p>
+            					<a class="btn btn-small hide" href="#"><i class="icon-ok"></i></a>
             				</div>
             				<div class="span3 location-map">
             					<img src="img/portland_map.png" alt="Portland, Oregon" class="hide">
@@ -588,6 +642,11 @@
             <script src="js/controllers/ProfilePictureController.js"></script>
             <script src="js/controllers/SkillsController.js"></script>
             <script src="js/controllers/PortfolioController.js"></script>
+            <script src="js/controllers/ExperienceController.js"></script>
+            <script src="js/controllers/TextareaBoxController.js"></script>
+            <script src="js/controllers/InputBoxController.js"></script>
+            <script src="js/controllers/PublishProfileController.js"></script>
+            <script src="js/controllers/SaveProfileController.js"></script>
             <script src="js/main.js"></script>
 
         </body>

@@ -6,7 +6,8 @@ jQuery(document).ready(function($) {
 
 	var nameController = new Toptal.DetailController({
 		el: $(".details .name"),
-		defaultVal: "Add name"
+		defaultVal: "Add name",
+		globalEvent: "name"
 	});
 
 	var locationController = new Toptal.LocationController({
@@ -26,7 +27,29 @@ jQuery(document).ready(function($) {
 	});
 
 	var portfolioController = new Toptal.PortfolioController({
-		el: $(".portfolio")
+		el: $(".portfolio"),
+		placeholder1: "Project name",
+		placeholder2: "Skills used"
+	});
+
+	var experienceController = new Toptal.ExperienceController({
+		el: $(".experience"),
+		placeholder1: "Language",
+		placeholder2: "years"
+	});
+
+	var environmentController = new Toptal.InputController({
+		el: $(".environment")
+	});
+
+	var mostAmazingController = new Toptal.TextareaController({
+		el: $(".most-amazing"),
+		placeholder: "tell us about the best software you have worked on"
+	});
+
+	var inClientsController = new Toptal.TextareaController({
+		el: $(".best-client"),
+		placeholder: "tell us about what your best client is"
 	});
 });
 

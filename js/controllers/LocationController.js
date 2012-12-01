@@ -25,11 +25,13 @@ Toptal.LocationController = Toptal.DetailController.sub({
 
 	},
 
-	accept:function(){
+	accept:function(val){
 		this.constructor.__super__.accept.apply(this, arguments);
-		this.validationMessage.addClass("hide");
-		this.locationMap.find("img").removeClass("hide");
-		this.locationMap.find("h4, .add").addClass("hide");
+		if (val === "Portland") {
+			this.validationMessage.addClass("hide");
+			this.locationMap.find("img").removeClass("hide");
+			this.locationMap.find("h4, .add").addClass("hide");
+		}
 
 	},
 

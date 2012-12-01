@@ -16,6 +16,7 @@ Toptal.DetailController = Spine.Controller.sub({
 		this.link.toggleClass("hide");
 		this.input.toggleClass("hide");
 		this.input.focus();
+		e.preventDefault();
 	},
 
 	keyup: function(e){
@@ -37,6 +38,10 @@ Toptal.DetailController = Spine.Controller.sub({
 			.toggleClass("hide");
 			this.input.toggleClass("hide");
 			this.icon.addClass("hide");
+			if (this.globalEvent) {
+				Spine.trigger(this.globalEvent+':updated', val);
+			}
+
 		}
 	},
 

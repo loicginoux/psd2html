@@ -18,6 +18,7 @@ Toptal.SkillController =  Spine.Controller.sub({
 		this.inputGroup.removeClass("hide");
 		this.link.addClass("hide");
 		this.input.focus();
+		e.preventDefault();
 	},
 
 	changeLevel:function(e){
