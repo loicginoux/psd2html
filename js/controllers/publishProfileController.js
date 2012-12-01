@@ -8,7 +8,6 @@ Toptal.PublishProfileController = Spine.Controller.sub({
 	},
 
 	publish: function(e){
-
 		e.preventDefault();
 	}
 });

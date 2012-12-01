@@ -4,6 +4,7 @@ Toptal.InputController = Spine.Controller.sub({
 		"click a.btn": "update",
 		"keyup input": "keyup"
 	},
+
 	elements:{
 		".add": "link",
 		"a.btn": "updateBtn",

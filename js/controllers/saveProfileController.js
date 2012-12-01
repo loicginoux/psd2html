@@ -13,7 +13,6 @@ Toptal.SaveProfileController = Spine.Controller.sub({
 		// this.skills
 	},
 	save: function(e){
-
 		e.preventDefault();
 	},
 
