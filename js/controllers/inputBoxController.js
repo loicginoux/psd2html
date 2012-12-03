@@ -36,9 +36,23 @@ Toptal.InputController = Spine.Controller.sub({
 	},
 
 	keyup:function(e){
-		if (e.keyCode === 13) {
-			this.update();
+		this.updateBtn.removeClass("btn-success").find("i").removeClass("icon-white");
+		if (this.validate(e)) {
+			this.updateBtn.addClass("btn-success").find("i").addClass("icon-white");
 		}
+		if (e.keyCode === 13) {
+			this.update(e);
+		}
+	},
+
+
+	validate:function(e){
+		var val = e.target.value,
+			ret = false;
+		if (val !== "" && val !== this.placeholder) {
+			ret = true;
+		}
+		return ret;
 	},
 
 	update:function(e){
@@ -60,5 +74,15 @@ Toptal.InputController = Spine.Controller.sub({
 		if (e) {
 			e.preventDefault();
 		}
+	},
+
+	setValue:function(value){
+		this.p.html(value);
+		this.input.val(value);
+		this.p.removeClass("hide");
+		this.link.addClass("hide");
+	},
+	getValue:function(){
+		return this.p.html();
 	}
 });

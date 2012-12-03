@@ -1,7 +1,9 @@
 Toptal.TextareaController = Spine.Controller.sub({
 	events:{
 		"hover": "hover",
-		"click a.btn": "update"
+		"click a.btn": "update",
+		"keyup textarea": "keyup"
+
 	},
 	elements:{
 		".add": "link",
@@ -35,6 +37,22 @@ Toptal.TextareaController = Spine.Controller.sub({
 		}
 	},
 
+	keyup:function(e){
+		this.updateBtn.removeClass("btn-success").find("i").removeClass("icon-white");
+		if (this.validate(e)) {
+			this.updateBtn.addClass("btn-success").find("i").addClass("icon-white");
+		}
+	},
+
+	validate:function(e){
+		var val = e.target.value,
+			ret = false;
+		if (val !== "" && val !== this.placeholder) {
+			ret = true;
+		}
+		return ret;
+	},
+
 	update:function(e){
 		this.textarea.removeClass("error");
 		var val = this.textarea.val();
@@ -66,5 +84,14 @@ Toptal.TextareaController = Spine.Controller.sub({
 
 		}
 
+	},
+
+	setValue:function(value){
+		this.quote.html(value).removeClass("hide");
+		this.textarea.val(value);
+		this.link.addClass("hide");
+	},
+	getValue:function(){
+		return this.quote.html();
 	}
 });

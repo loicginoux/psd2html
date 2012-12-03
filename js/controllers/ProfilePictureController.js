@@ -43,6 +43,13 @@ Toptal.ProfilePictureController = Spine.Controller.sub({
 			};
 			reader.readAsDataURL(input.files[0]);
 		}
+	},
+
+	setValue:function(value){
+
+	},
+	getValue:function(){
+		return ""
 	}
 
 });

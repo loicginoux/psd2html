@@ -92,8 +92,8 @@
             			<div class="span9 profile-intro">
             				<div class="row">
             					<div class="span3 pull-right action">
-            						<button class="btn btn-inverse" type="button">Save profile</button>
-            						<button class="btn btn-primary" type="button">Publish profile</button>
+            						<button class="btn btn-inverse save" type="button">Save profile</button>
+            						<button class="btn btn-primary publish" type="button">Publish profile</button>
             						<p class="muted">
             							<small>(you can only publish a completed profile)</small>
             						</p>
@@ -104,20 +104,19 @@
             					<div class="span6">
             						<div class="details">
             							<div class="name">
-            								<i class="icon-ok hide"></i>
-            								<a href="#
-            								">Add name</a>
+            								<a class="btn btn-small hide" href="#"><i class="icon-ok "></i></a>
+            								<a href="#" class="display">Add name</a>
             								<input type="text" class="hide">
             							</div>
             							<div class="location">
-            								<i class="icon-ok hide"></i>
+            								<a class="btn btn-small hide btn-success" href="#"><i class="icon-ok icon-white"></i></a>
             								<span class="validationMessage muted hide">Validating city...</span>
-            								<a href="#">Add location</a>
+            								<a href="#" class="display">Add location</a>
             								<input type="text" class="hide">
             							</div>
             							<div class="languages">
-            								<i class="icon-ok hide"></i>
-            								<a href="#">Add languages</a>
+            								<a class="btn btn-small hide" href="#"><i class="icon-ok "></i></a>
+            								<a href="#" class="display">Add name</a>
             								<input type="text" class="hide">
             							</div>
             							<div class="skills">
@@ -181,7 +180,7 @@
             						</li>
             					</ul>
 
-            					<a class="btn btn-small btn-success hide" href="#"><i class="icon-ok icon-white"></i></a>
+            					<a class="btn btn-small hide" href="#"><i class="icon-ok "></i></a>
 
             				</div>
             				<div class="span3 experience">
@@ -221,7 +220,7 @@
             						</li>
             					</ul>
 
-            					<a class="btn btn-small btn-success hide" href="#"><i class="icon-ok icon-white"></i></a>
+            					<a class="btn btn-small hide" href="#"><i class="icon-ok "></i></a>
 
             				</div>
             				<div class="span3 code">
@@ -634,6 +633,7 @@
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
 
+            <script src="js/vendor/json2.js"></script>
             <script src="js/vendor/bootstrap.min.js"></script>
             <script src="js/vendor/spine.js"></script>
             <script src="js/plugins.js"></script>
@@ -645,8 +645,7 @@
             <script src="js/controllers/ExperienceController.js"></script>
             <script src="js/controllers/TextareaBoxController.js"></script>
             <script src="js/controllers/inputBoxController.js"></script>
-            <script src="js/controllers/publishProfileController.js"></script>
-            <script src="js/controllers/saveProfileController.js"></script>
+            <script src="js/controllers/saveAndPublishController.js"></script>
             <script src="js/main.js"></script>
 
         </body>

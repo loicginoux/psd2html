@@ -1,15 +1,16 @@
 Toptal.DetailController = Spine.Controller.sub({
 	events: {
-		"click a": "click",
+		"click a.display": "click",
+		"click a.btn": "update",
 		"keyup input": "keyup",
-		"focus input": "validate",
+		"focus input": "keyup",
 		"focusout input": "unfocus"
 	},
 
 	elements:{
-		"a": "link",
+		"a.display": "link",
 		"input": "input",
-		".icon-ok": "icon"
+		".btn": "updateBtn"
 	},
 
 	click: function(e){
@@ -20,46 +21,54 @@ Toptal.DetailController = Spine.Controller.sub({
 	},
 
 	keyup: function(e){
-		this.validate();
-		var val = this.input.val();
+		this.updateBtn
+			.removeClass("hide")
+			.removeClass("btn-success")
+			.find("i")
+				.removeClass("icon-white");
+		if (this.validate(e)) {
+			this.updateBtn.addClass("btn-success").find("i").addClass("icon-white");
+		}
 		if (e.keyCode === 13) {
-			if (val) {
-				this.accept(val);
-			} else{
-				this.accept(this.defaultVal);
-			}
+			this.update(e);
 		}
 	},
 
-	accept: function(val){
-		if (val) {
-			this.link
+	update: function(e){
+		var inputVal = this.input.val();
+		var val = (!inputVal) ? this.defaultVal : inputVal;
+		this.link
 			.html(val)
 			.toggleClass("hide");
-			this.input.toggleClass("hide");
-			this.icon.addClass("hide");
-			if (this.globalEvent) {
-				Spine.trigger(this.globalEvent+':updated', val);
-			}
-
+		this.input.toggleClass("hide");
+		this.updateBtn.toggleClass("hide");
+		if (this.globalEvent) {
+			Spine.trigger(this.globalEvent+':updated', val);
 		}
 	},
 
 	validate:function(e){
-		if (!this.input.val()) {
-			this.icon.addClass("hide");
-		}else{
-			this.icon.removeClass("hide");
+		var ret = false;
+		if (this.input.val()) {
+			ret = true;
 		}
+		return ret;
 	},
 
 	unfocus:function(){
 		if (this.input.hasClass("hide")) {return;}
-		var val = this.input.val();
-		if (val) {
-			this.accept(val);
-		}else{
-			this.accept(this.defaultVal);
-		}
+		this.link.removeClass("hide");
+		this.input.addClass("hide");
+		this.updateBtn.addClass("hide");
+	},
+
+	setValue:function(value){
+		this.link.html(value);
+		this.input.val(value);
+
+	},
+
+	getValue:function(){
+		return this.link.html();
 	}
 });

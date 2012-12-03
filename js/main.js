@@ -26,6 +26,8 @@ jQuery(document).ready(function($) {
 		// ,skills:["PHP", "Ruby", "ActionScript", "Javascript"]
 	});
 
+
+
 	var portfolioController = new Toptal.PortfolioController({
 		el: $(".portfolio"),
 		placeholder1: "Project name",
@@ -50,6 +52,22 @@ jQuery(document).ready(function($) {
 	var inClientsController = new Toptal.TextareaController({
 		el: $(".best-client"),
 		placeholder: "tell us about what your best client is"
+	});
+
+	var savePublishController = new Toptal.SaveAndPublishController({
+		el: $(".action"),
+		controllers:{
+			profile: profileController,
+			name: nameController,
+			location: locationController,
+			language: languageController,
+			skills: skillController,
+			portfolio: portfolioController,
+			experience: experienceController,
+			environment: environmentController,
+			amazing: mostAmazingController,
+			clients: inClientsController
+		}
 	});
 });
 

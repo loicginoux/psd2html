@@ -14,7 +14,7 @@ Toptal.SkillController =  Spine.Controller.sub({
 		".level": "level"
 	},
 
-	click:function(){
+	click:function(e){
 		this.inputGroup.removeClass("hide");
 		this.link.addClass("hide");
 		this.input.focus();
@@ -59,35 +59,35 @@ Toptal.SkillController =  Spine.Controller.sub({
 	addSkill:function(skill, level){
 		var li = $("<li class='skill label "+level+"'>"+skill+"<i class='icon-remove-sign'></li>");
 		var lis = this.skillList.find("li");
-		var firstLi = this.skillList.find("li."+level);
-		if (!lis.length || level == "expert") {
+		var firstMedium = this.skillList.find("li.medium:first");
+		var firstStrong = this.skillList.find("li.strong:first");
+		if (!lis.length || level === "expert") {
 			this.skillList.prepend(li);
-		}else{
-			var listLi, i;
-			for (i = 0; i < lis.length; i++) {
-				listLi = $(lis[i]),
-					listLiLevel = "";
-				if (listLi.hasClass("strong")) {
-					listLiLevel = 'strong';
-				}
-				else if (listLi.hasClass("expert")) {
-					listLiLevel = 'expert';
-				}
-				else if (listLi.hasClass("medium")) {
-					listLiLevel = 'medium';
-				}
 
-				if(listLiLevel === level){
-					break;
-				}
-			}
-			if (i === lis.length) {
+		}else if(level === "medium"){
+			if (firstMedium.length) {
+				firstMedium.before(li);
+			} else{
 				this.skillList.append(li);
-			}else{
-				listLi.before(li);
+			}
+
+		}else if (level === "strong") {
+			if (firstStrong.length) {
+				firstStrong.before(li);
+			}else if (firstMedium.length) {
+				firstMedium.before(li);
+			} else{
+				this.skillList.append(li);
 			}
 
 		}
+	},
+
+	setValue:function(value){
+
+	},
+	getValue:function(){
+		return ""
 	}
 
 });

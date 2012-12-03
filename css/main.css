@@ -173,6 +173,7 @@ margin: -1px;
 .profile .portfolio, .profile .most-amazing{
     border-top: 0;
 }
+
 .profile .experience,
 .profile .code,
 .profile .conditions,
@@ -218,7 +219,6 @@ margin: -1px;
     padding-left: 30px;
 }
 .profile-image img{
-    opacity: 0.5;
 
     width: 100%;
     height: 100%;
@@ -242,7 +242,7 @@ margin: -1px;
     margin-bottom: 10px;
 }
 
-.details .name a, .details .name input {
+.details .name a.display, .details .name input {
     padding: 0px 10px;
     width: 400px;
     height: auto;
@@ -263,11 +263,19 @@ margin: -1px;
     border: 1px solid #ccc
 }
 
-.name .icon-ok{
-    float:right;
+
+.details .name a.btn{
     position: absolute;
-    right: 15px;
-    top: 13px;
+    top: 4px;
+    right: 0;
+}
+
+.details .location .btn, 
+.details .languages .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2px 5px 0 0;
 }
 
 .details .location, .details .languages, .details .skills .skill-input{
@@ -276,7 +284,7 @@ margin: -1px;
     height: 20px;
 }
 
-.details .location a, .details .location input, .details .languages a, .details .languages input, .details .skills a.add, .details .skills input {
+.location a.display, .details .location input, .details .languages a.display, .details .languages input, .details .skills a.add, .details .skills input {
     padding: 0 10px;
     width: 400px;
     display: inline-block;
@@ -320,16 +328,10 @@ margin-top: 0;
     position:absolute;
 
 
-
     top: 2px;
     right: 15px;
 }
 
-.location .icon-ok, .languages .icon-ok{
-    position: absolute;
-    right: 15px;
-    top: 2px;
-}
 
 .skills .icon-plus{
     display:none;
@@ -348,8 +350,8 @@ margin-top: 0;
 .mySkills li{
     display: inline;
 
-    margin: 0 5px 0 0;
-    position: relative;
+    margin: 0 6px 0 0;
+    padding: 4px 9px;
 }
 .mySkills li.strong{
    background-color: orange;
@@ -443,7 +445,11 @@ margin-top: 0;
 .experience ul.show{
     margin-top:45px;
 }
-.portfolio ul, .experience ul, .most-amazing textarea, .best-client textarea, .environment input{
+.portfolio ul,
+.experience ul,
+.most-amazing textarea,
+.best-client textarea,
+.environment input{
     margin: 20px 0 0 17px;
     margin-left: 17px;
     height: 124px;
@@ -486,11 +492,7 @@ margin-top: 0;
     font-weight: bold;
 }
 
-.portfolio a.btn,
-.experience a.btn,
-.most-amazing .btn,
-.best-client .btn,
-.environment .btn{
+.name a.btn, .location a.btn, .languages a.btn, .experience a.btn, .most-amazing .btn, .best-client .btn, .environment .btn, div.portfolio a.btn{
     margin: 8px 18px 9px;
     float: left;
     -webkit-border-radius: 20px;
@@ -711,7 +713,7 @@ footer .terms .pull-right a{
 }
 
 input[type="text"].error, textarea.error{
-	border: 2px solid #B94A48;
+	border: 1px solid #B94A48;
 }
 
 .btn.rounded{

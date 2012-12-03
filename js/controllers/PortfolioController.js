@@ -39,14 +39,39 @@ Toptal.PortfolioController = Spine.Controller.sub({
 	},
 
 	keyup:function(e){
+		this.updateBtn.removeClass("btn-success").find("i").removeClass("icon-white");
 		if (e.keyCode === 13) {
 			this.update();
 		}
+		if (this.validate(e)) {
+			this.updateBtn.addClass("btn-success").find("i").addClass("icon-white");
+		}
 	},
+
+	validate:function(e){
+		var ret = false;
+		target = $(e.target);
+		if (target.val() && target.val() !== this.placeholder1 && target.val() !== this.placeholder2) {
+			if (target.siblings().val() !== this.placeholder1 && target.siblings().val() !== this.placeholder2) {
+				ret = true;
+			}
+		}
+		return ret;
+	},
+
+	validateFirstInput: function(firstInput, secondInput){
+		return (firstInput === this.placeholder1 && secondInput !== this.placeholder2);
+	},
+
+	validateSecondInput:function(firstInput, secondInput){
+		return (firstInput !== this.placeholder1 && secondInput === this.placeholder2);
+	},
+
 	update:function(e){
 		var allSkills = "",
 			uniqSkills = [],
 			skillsHTML = [],
+			skillsList = "",
 			error = false;
 
 		//clear all
@@ -65,8 +90,8 @@ Toptal.PortfolioController = Spine.Controller.sub({
 				continue;
 			}
 			allSkills += (skillsVal != this.placeholder2)? ", "+skillsVal: "";
-			var errorOnProj = (projectVal === this.placeholder1 && skillsVal !== this.placeholder2);
-			var errorOnSkill = (projectVal !== this.placeholder1 && skillsVal === this.placeholder2);
+			var errorOnProj = this.validateFirstInput(projectVal, skillsVal);
+			var errorOnSkill = this.validateSecondInput(projectVal, skillsVal);
 
 			if (!errorOnProj && !errorOnSkill) {
 				var data = {
@@ -86,7 +111,10 @@ Toptal.PortfolioController = Spine.Controller.sub({
 
 		}
 		//update list
-		var skillsList = skillsHTML.join("");
+		if (!error) {
+			skillsList = skillsHTML.join("");
+		}
+
 		if (!error && skillsList.length) {
 			this.listShow.append(skillsList);
 
@@ -141,5 +169,47 @@ Toptal.PortfolioController = Spine.Controller.sub({
 			}
 		}
 		return contains;
+	},
+
+	setValue:function(value){
+		skillsHTML = [];
+		if (value.skills) {
+			this.skills.html(value.skills);
+			this.skills.removeClass("hide");
+		}
+		if (value.experience && value.experience.length) {
+			for (var i = 0; i < value.experience.length; i++) {
+				var exp = value.experience[i];
+				var data = {
+					title: exp[0],
+					desc: exp[1]
+				};
+				this.projects.eq(i).val(exp[0]);
+				this.projects.eq(i).next().val(exp[1]);
+				skillsHTML.push(tmpl(this.tmpl, data));
+			}
+			this.listShow.append(skillsHTML.join(""));
+			this.listShow.removeClass("hide");
+			this.link.addClass("hide");
+		}
+
+	},
+	getValue:function(){
+		var val = {
+			skills:"",
+			experience:[]
+		};
+		if (this.skills) {
+			val.skills = this.skills.html();
+		}
+		var exp = this.listShow.find("li");
+		for (var i = 0; i < exp.length; i++) {
+			var ex = $(exp[i]);
+			var project = ex.find("strong");
+			var projVal = project.html();
+			skillVal = ex.html().replace(/<strong>(.)*?<\/strong>, /, "");
+			val.experience.push([projVal, skillVal]);
+		}
+		return val;
 	}
 });
